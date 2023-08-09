@@ -17,12 +17,14 @@ jobs:
 
   test:
     needs: common_steps
+    runs-on: ubuntu-latest
     steps:
       - name: Run tests
         run: npm test
 
   deploy:
     needs: common_steps
+    runs-on: ubuntu-latest
     steps:
       - name: Build Project
         run: npm run build
